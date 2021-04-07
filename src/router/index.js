@@ -1,27 +1,62 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Dashboard from "../views/Dashboard";
+import GridSystem from "../views/GridSystem";
+import GridListPage from "../views/GridListPage";
+import BreaksPoints from "../views/BreaksPoints";
+import Typography from "../views/Typography";
+import ChatComponent from "../views/ChatComponent";
+import FormConponent from "../views/FormConponent";
+import TableComponent from "../views/TableComponent";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    name: "Dashboard",
+    component: Dashboard,
+  },
+
+  {
+    path: "/gridsystem",
+    name: "GridSystem",
+    component: GridSystem,
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    path: "/grid-list-page",
+    name: "GridListPage",
+    component: GridListPage,
+  },
+  {
+    path: "/breaks-points",
+    name: "BreaksPoints",
+    component: BreaksPoints,
+  },
+  {
+    path: "/typography",
+    name: "Typography",
+    component: Typography,
+  },
+  {
+    path: "/chat-component",
+    name: "ChatComponent",
+    component: ChatComponent,
+  },
+  {
+    path: "/form-component",
+    name: "FormConponent",
+    component: FormConponent,
+  },
+  {
+    path: "/table-component",
+    name: "TableComponent",
+    component: TableComponent,
   },
 ];
 
 const router = new VueRouter({
+  mode: "history",
   routes,
 });
 
